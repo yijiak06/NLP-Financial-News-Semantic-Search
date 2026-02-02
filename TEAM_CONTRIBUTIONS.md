@@ -4,15 +4,15 @@
 
 1.  **Yijia Kang** - Student ID: 33344554
 2.  **Manasvi Vardham** - Student ID: 53548175
-3.  **[Teammate 2 Name]** - Student ID: [ID]
+3.  **Akansha Rawat** - Student ID: 63153551
 
 ------------------------------------------------------------------------
 
 ## Project Roles Overview
 
 -   **Development Phase:** Led by **Yijia Kang**, focusing on the codebase, algorithms, and AI model integration.
--   **Testing & QA Phase:** Led by **[Teammate 1 Name]** and **[Teammate 2 Name]**, focusing on system stability and result verification.
--   **Demonstration Phase:** Led by **[Teammate 1 Name]** (Video Production) and **[Teammate 2 Name]** (Scenario Design).
+-   **Testing & QA Phase:** Led by **[Teammate 1 Name]** and **Akansha Rawat**, focusing on system stability and result verification.
+-   **Demonstration Phase:** Led by **Akansha Rawat** (Video Production) and **[Teammate 2 Name]** (Scenario Design).
 
 ------------------------------------------------------------------------
 
@@ -33,8 +33,10 @@
 -   **Functional Testing:** Conducted "Black Box Testing" on the Web Interface (`app.py`) to ensure all buttons and search features work without crashing.
 -   **Performance Check:** Verified that the "Similarity Score" feature displays correctly for various queries.
 
-### Member 3: [Teammate 2 Name]
+### Member 3: Akansha Rawat
 
--   **Demo Scripting:** Designed the user scenarios and wrote the narration script for the demo video (e.g., selecting which specific questions to ask: *"Who announced cash dividends?"*).
--   **CLI Testing:** Tested the Command Line Interface (`main.py`) to ensure robust error handling (e.g., checking what happens when the user types 'exit' or invalid inputs).
--   **Documentation Review:** Reviewed the `README.md` to ensure the installation steps are clear and reproducible.
+-   **Resolved critical system compatibility issues:** Debugged and fixed Unicode encoding errors (cp1252 codec) and implemented regex-based filename sanitization to handle invalid Windows filesystem characters (\", :, /, *, ?, <>, |), preventing file I/O failures during document generation
+-   **Optimized LLM integration and RAG pipeline:** Fixed empty output generation by tuning hyperparameters (max_length=200, min_length=15, num_beams=5, no_repeat_ngram_size=3) and implemented fallback mechanism using extractive summarization when the model fails to generate responses
+-   **Debugged memory allocation failures:** Resolved OSError (paging file too small) when loading flan-t5-base by downgrading to flan-t5-small and configuring PyTorch for CPU inference, ensuring the system runs on resource-constrained environments
+-   **Developed production-ready Streamlit web interface:** Built app.py with session state management, model caching, dynamic top-K retrieval controls, and interactive UI components (example query buttons, expandable document previews)
+-   **Validated end-to-end system integration:** Performed comprehensive testing across Jupyter Notebook, CLI, and Streamlit environments, ensuring robust error handling, data pipeline validation (CSV schema corrections), and cross-platform compatibility
