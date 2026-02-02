@@ -3,7 +3,7 @@
 ## Team Members
 
 1.  **Yijia Kang** - Student ID: 33344554
-2.  **[Teammate 1 Name]** - Student ID: [ID]
+2.  **Manasvi Vardham** - Student ID: 53548175
 3.  **[Teammate 2 Name]** - Student ID: [ID]
 
 ------------------------------------------------------------------------
@@ -27,7 +27,7 @@
     -   `app.py` for the Streamlit web interface.
 -   **AI Integration:** Implemented `Sentence-BERT` for vector embeddings and `Flan-T5` for the Q&A generation.
 
-### Member 2: [Teammate 1 Name]
+### Member 2: Manasvi Vardham
 
 -   **Demo Video Production:** Responsible for recording the screen capture of the software in action, editing the footage, and producing the final 2-3 minute submission video.
 -   **Functional Testing:** Conducted "Black Box Testing" on the Web Interface (`app.py`) to ensure all buttons and search features work without crashing.
