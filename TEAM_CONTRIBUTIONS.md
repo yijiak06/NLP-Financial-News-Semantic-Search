@@ -37,6 +37,6 @@
 
 -   **Resolved critical system compatibility issues:** Debugged and fixed Unicode encoding errors (cp1252 codec) and implemented regex-based filename sanitization to handle invalid Windows filesystem characters (\", :, /, *, ?, <>, |), preventing file I/O failures during document generation
 -   **Optimized LLM integration and RAG pipeline:** Fixed empty output generation by tuning hyperparameters (max_length=200, min_length=15, num_beams=5, no_repeat_ngram_size=3) and implemented fallback mechanism using extractive summarization when the model fails to generate responses
--   **Debugged memory allocation failures:** Resolved OSError (paging file too small) when loading flan-t5-base by downgrading to flan-t5-small and configuring PyTorch for CPU inference, ensuring the system runs on resource-constrained environments
+-   **Debugged memory allocation failures:** Resolved OSError (paging file too small) when loading flan-t5-base by downgrading to flan-t5-small, ensuring the system runs on resource-constrained environments
 -   **Developed production-ready Streamlit web interface:** Built app.py with session state management, model caching, dynamic top-K retrieval controls, and interactive UI components (example query buttons, expandable document previews)
 -   **Validated end-to-end system integration:** Performed comprehensive testing across Jupyter Notebook, CLI, and Streamlit environments, ensuring robust error handling, data pipeline validation (CSV schema corrections), and cross-platform compatibility
