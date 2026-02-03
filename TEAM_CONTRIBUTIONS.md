@@ -11,8 +11,8 @@
 ## Project Roles Overview
 
 -   **Development Phase:** Led by **Yijia Kang**, focusing on the codebase, algorithms, and AI model integration.
--   **Testing & QA Phase:** Led by **[Teammate 1 Name]** and **Akansha Rawat**, focusing on system stability and result verification.
--   **Demonstration Phase:** Led by **Akansha Rawat** (Video Production) and **[Teammate 2 Name]** (Scenario Design).
+-   **Testing & QA Phase:** Led by **Manasvi Vardham** and **Akansha Rawat**, focusing on system stability and result verification.
+-   **Demonstration Phase:** Led by **Akansha Rawat** and **Manasvi Vardham**.
 
 ------------------------------------------------------------------------
 
@@ -20,12 +20,13 @@
 
 ### Member 1: Yijia Kang
 
+-   **Data Engineering & Management:** Responsible for sourcing the raw financial news dataset, organizing the file structure, and executing comprehensive data cleaning (removing duplicates, filtering artifacts like `[]` and `nan`) to build a high-quality search corpus.
 -   **System Architecture:** Designed the end-to-end RAG (Retrieval-Augmented Generation) pipeline.
 -   **Implementation:** Wrote the core Python scripts:
-    -   `data_prep.py` for data cleaning.
+    -   `data_prep.py` for automated data processing and regex-based filename sanitization.
     -   `main.py` for the CLI engine and search logic.
-    -   `app.py` for the Streamlit web interface.
--   **AI Integration:** Implemented `Sentence-BERT` for vector embeddings and `Flan-T5` for the Q&A generation.
+    -   `app.py` for the Streamlit web interface with session state management.
+-   **AI Integration:** Implemented `Sentence-BERT` for vector embeddings and `Flan-T5` for Q&A generation.
 
 ### Member 2: Manasvi Vardham
 
@@ -35,8 +36,6 @@
 
 ### Member 3: Akansha Rawat
 
--   **Resolved critical system compatibility issues:** Debugged and fixed Unicode encoding errors (cp1252 codec) and implemented regex-based filename sanitization to handle invalid Windows filesystem characters (\", :, /, *, ?, <>, |), preventing file I/O failures during document generation
--   **Optimized LLM integration and RAG pipeline:** Fixed empty output generation by tuning hyperparameters (max_length=200, min_length=15, num_beams=5, no_repeat_ngram_size=3) and implemented fallback mechanism using extractive summarization when the model fails to generate responses
--   **Debugged memory allocation failures:** Resolved OSError (paging file too small) when loading flan-t5-base by downgrading to flan-t5-small, ensuring the system runs on resource-constrained environments
--   **Developed production-ready Streamlit web interface:** Built app.py with session state management, model caching, dynamic top-K retrieval controls, and interactive UI components (example query buttons, expandable document previews)
--   **Validated end-to-end system integration:** Performed comprehensive testing across Jupyter Notebook, CLI, and Streamlit environments, ensuring robust error handling, data pipeline validation (CSV schema corrections), and cross-platform compatibility
+-   **Environment Compatibility Testing:** Identified and tested the "paging file too small" memory issue on Windows environments, verifying the system's flexibility to switch between `flan-t5-base` and `flan-t5-small`.
+-   **Cross-Platform Debugging:** Reported critical Windows-specific issues (e.g., Unicode encoding errors and invalid filename characters), which ensured the final code is robust across different operating systems.
+-   **Integration Verification:** Validated that the `app.py` interface loads correctly and caches models as expected on local machines.
